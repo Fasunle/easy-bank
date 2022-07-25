@@ -10,7 +10,12 @@ import {
     GridItem
  } from "@chakra-ui/react";
 import {Logo, EasyLink } from "./utils";
-import { btnWithGradientStyle, desktopFooterContainerStyle, mobileFooterContainerStyle } from "./Footer.styles";
+import { 
+    btnWithGradientStyle, 
+    desktopFooterContainerStyle,
+    footerContainerStyle, 
+    mobileFooterContainerStyle 
+} from "./Footer.styles";
 
 
 const SocialLink = ({href, alt}: {href: string, alt?: string}): JSX.Element => (
@@ -61,9 +66,9 @@ const  SupportLinks = () => (
 
 
 const Footer = () => (
-   <>
+   <Box as="footer" sx={footerContainerStyle}>
         {/* MOBILE COMPONENT */}
-        <VStack as="footer" sx={mobileFooterContainerStyle}>
+        <VStack sx={mobileFooterContainerStyle}>
             <VStack sx={{justifyContent: "space-around", h: '8rem'}}>
                 <Box bgColor={'white'}>
                     {<Logo /> || <Heading as="h2">EasyBank</Heading>}
@@ -77,7 +82,7 @@ const Footer = () => (
         </VStack>
 
         {/* DESKTOP COMPONENT */}
-        <Grid as="footer" templateColumns='repeat(15, 1fr)' gap={6} h={'10rem'} sx={desktopFooterContainerStyle}>
+        <Grid templateColumns='repeat(15, 1fr)' gap={6} h={'10rem'} sx={desktopFooterContainerStyle}>
             <GridItem w='100%' colStart={2} colSpan={3} h='100%' sx={{display: 'flex'}}>
 
                 <VStack sx={{justifyContent: "space-around"}}>
@@ -102,7 +107,7 @@ const Footer = () => (
                 <Invite />
             </GridItem>
         </Grid>
-   </>
+   </Box>
 );
 
 export default Footer;
