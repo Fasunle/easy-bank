@@ -13,7 +13,7 @@ export const theme = extendTheme({
     },
     // breakpoints for mobile and desktop
     breakpoints: {
-        sm: '23.4375em',
+        sm: '17em',         // smallest screen size supported
         xl: '90em',
     },
     // Easy bank font family
