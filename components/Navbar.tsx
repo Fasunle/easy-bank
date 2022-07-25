@@ -1,12 +1,13 @@
 // Navigation component
 
 import { useState } from "react";
-import { Link, Flex, List, Button} from "@chakra-ui/react";
+import { Link, Flex, List, Button, Box} from "@chakra-ui/react";
 import NextLink from "next/link";
 import Image from "next/image";
 
 
 import { 
+    btnWithGradientStyle,
     hamburgerIconStyle, 
     inviteLinkStyles, 
     menuListItems, 
@@ -53,7 +54,12 @@ const Navbar = () => {
             </List>
 
             <List sx={inviteLinkStyles}>
-                <EasyLink href="/#invite" label="Request Invite"/>
+                <Box
+                    as="button"
+                    sx={btnWithGradientStyle}
+                    >
+                    Request Invite
+                </Box>
             </List>
 
             <Button colorScheme="whiteAlpha" onClick={() => setOpen(!open)} sx={hamburgerIconStyle}>
