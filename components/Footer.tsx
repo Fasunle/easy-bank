@@ -10,7 +10,7 @@ import {
     GridItem
  } from "@chakra-ui/react";
 import {Logo, EasyLink } from "./utils";
-import { btnWithGradientStyle, mobileFooterContainerStyle } from "./Footer.styles";
+import { btnWithGradientStyle, desktopFooterContainerStyle, mobileFooterContainerStyle } from "./Footer.styles";
 
 
 const SocialLink = ({href, alt}: {href: string, alt?: string}): JSX.Element => (
@@ -77,10 +77,7 @@ const Footer = () => (
         </VStack>
 
         {/* DESKTOP COMPONENT */}
-        <Grid as="footer" templateColumns='repeat(15, 1fr)' gap={6} h={'10rem'} sx={{bg: "primary_1", color: "gray.300", display: {
-            sm: 'none',
-            lg: 'grid'
-        }}}>
+        <Grid as="footer" templateColumns='repeat(15, 1fr)' gap={6} h={'10rem'} sx={desktopFooterContainerStyle}>
             <GridItem w='100%' colStart={2} colSpan={3} h='100%' sx={{display: 'flex'}}>
 
                 <VStack sx={{justifyContent: "space-around"}}>

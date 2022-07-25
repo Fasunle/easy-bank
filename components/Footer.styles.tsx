@@ -24,3 +24,17 @@ export const mobileFooterContainerStyle = {
     },
     padding: "1rem"
 }
+
+export const desktopFooterContainerStyle = {
+    bg: "primary_1",
+    color: "gray.300",
+    display: {
+        sm: 'none',
+        lg: 'grid'
+    },
+    pos: "fixed", 
+    bottom: "0", 
+    left: '0', 
+    right: '0',
+    zIndex: 10
+}
