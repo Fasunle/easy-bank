@@ -62,6 +62,7 @@ const  SupportLinks = () => (
 
 const Footer = () => (
    <>
+        {/* MOBILE COMPONENT */}
         <VStack as="footer" sx={mobileFooterContainerStyle}>
             <VStack sx={{justifyContent: "space-around", h: '8rem'}}>
                 <Box bgColor={'white'}>
@@ -75,6 +76,7 @@ const Footer = () => (
             <Invite />
         </VStack>
 
+        {/* DESKTOP COMPONENT */}
         <Grid as="footer" templateColumns='repeat(15, 1fr)' gap={6} h={'10rem'} sx={{bg: "primary_1", color: "gray.300", display: {
             sm: 'none',
             lg: 'grid'
@@ -98,7 +100,6 @@ const Footer = () => (
             <GridItem w='100%' colStart={8} colSpan={3} h='100%' sx={{display: 'flex', justifyContent: "start", alignItems: "center"}}>
                 <SupportLinks/>
             </GridItem>
-
 
             <GridItem w='100%' colStart={11} colSpan={4} h='100%' sx={{display: 'flex', justifyContent: "center", alignItems: "center"}}>
                 <Invite />
