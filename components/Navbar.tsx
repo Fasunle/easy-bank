@@ -1,5 +1,6 @@
 // Navigation component
 
+import { useState } from "react";
 import { Link, Flex, List, Button} from "@chakra-ui/react";
 import NextLink from "next/link";
 import Image from "next/image";
@@ -8,6 +9,7 @@ import Image from "next/image";
 import { 
     hamburgerIconStyle, 
     inviteLinkStyles, 
+    menuListItems, 
     navConatinerStyles, 
     navItemStyles 
 } from "./navbar.styles";
@@ -33,27 +35,41 @@ const Logo = () => (
 );
 
 
-const Navbar = () => (
-    <Flex as="nav" sx={navConatinerStyles}>
-        {/* EasyBank Logo */}
-        <Logo/>
+const Navbar = () => {
 
-        <List sx={navItemStyles}>
-            <EasyLink href="/" label="Home"/>
-            <EasyLink href="/#about" label="About"/>
-            <EasyLink href="/#contact" label="Contact"/>
-            <EasyLink href="/#blog" label="Blog"/>
-            <EasyLink href="/#careers" label="Careers"/>
-        </List>
+    const [open, setOpen] = useState(true);
 
-        <List sx={inviteLinkStyles}>
-            <EasyLink href="/#invite" label="Request Invite"/>
-        </List>
+    return (
+        <Flex as="nav" sx={navConatinerStyles}>
+            {/* EasyBank Logo */}
+            <Logo/>
 
-        <Button colorScheme="whiteAlpha" sx={hamburgerIconStyle}>
-            <Image  src="/images/icon-hamburger.svg" width={32} height={32}/>
-        </Button>
-    </Flex>
-);
+            <List sx={navItemStyles}>
+                <EasyLink href="/" label="Home"/>
+                <EasyLink href="/#about" label="About"/>
+                <EasyLink href="/#contact" label="Contact"/>
+                <EasyLink href="/#blog" label="Blog"/>
+                <EasyLink href="/#careers" label="Careers"/>
+            </List>
+
+            <List sx={inviteLinkStyles}>
+                <EasyLink href="/#invite" label="Request Invite"/>
+            </List>
+
+            <Button colorScheme="whiteAlpha" onClick={() => setOpen(!open)} sx={hamburgerIconStyle}>
+                <Image  src="/images/icon-hamburger.svg" width={32} height={32}/>
+            </Button>
+
+            {/* Display this navigation on small screens */}
+            <List hidden={open} sx={menuListItems}>
+                <EasyLink href="/" label="Home"/>
+                <EasyLink href="/#about" label="About"/>
+                <EasyLink href="/#contact" label="Contact"/>
+                <EasyLink href="/#blog" label="Blog"/>
+                <EasyLink href="/#careers" label="Careers"/>
+            </List>
+        </Flex>
+    );
+}
 
 export default Navbar;

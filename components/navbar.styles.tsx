@@ -38,3 +38,22 @@ export const hamburgerIconStyle = {
         bg: "gray.50"
     }
 }
+
+
+export const menuListItems = {
+    "position": "absolute",
+    "height": "400px",
+    "display": {
+        "sm": "flex",
+        "lg": "none"
+    },
+    "flexDirection": "column",
+    "justifyContent": "space-around",
+    "alignItems": "center",
+    "bg": "white",
+    "inset": "1rem",
+    "top": "4rem", 
+    "boxShadow": "7px 2px 17px 3px #CEDBF5",
+    "borderRadius": "5px",
+    "zIndex": "10"
+}
