@@ -14,26 +14,8 @@ import {
     navConatinerStyles, 
     navItemStyles 
 } from "./navbar.styles";
+import {Logo, EasyLink} from "./utils"; 
 
-type EasyLinkType = {
-    label: string, 
-    href: string
-}
-
-const EasyLink = ({label, href}: EasyLinkType): JSX.Element => (
-    <NextLink href={`${href}`} passHref>
-        <Link>{label}</Link>
-    </NextLink>
-);
-
-
-const Logo = () => (
-    <NextLink href="/" passHref>
-        <Link>
-            <Image src="/images/logo.svg" height={'30'} width={'130'}/>
-        </Link>
-    </NextLink>
-);
 
 
 const Navbar = () => {
