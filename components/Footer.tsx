@@ -75,7 +75,7 @@ const Footer = () => (
             <Invite />
         </VStack>
 
-        <Grid  templateColumns='repeat(15, 1fr)' gap={6} h={'10rem'} sx={{bg: "primary_1", color: "gray.300", display: {
+        <Grid as="footer" templateColumns='repeat(15, 1fr)' gap={6} h={'10rem'} sx={{bg: "primary_1", color: "gray.300", display: {
             sm: 'none',
             lg: 'grid'
         }}}>
