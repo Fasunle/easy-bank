@@ -17,7 +17,8 @@ const desktopSectionConatainer = {
     "display": {
         "sm": "none",
         "lg": "grid"
-    }
+    }, 
+    bg: "neutral_2"
 }
 
 const informationBodyStyle = {
@@ -93,7 +94,7 @@ const InformationBody = ({whyUs}: {whyUs: WhyUsType[]}) => (
 
 export const WhyUs = () => (
     <>
-        <Box as="section" sx={{display: {lg: 'none'}}}>
+        <Box as="section" sx={{display: {lg: 'none'}, bg: "neutral_2"}}>
                 <VStack sx={{display: {sm: 'flex', lg: 'none'}, m: '2rem 1rem', textAlign: 'center'}}>
                     <Heading as="h1" sx={{ color: "blackAlpha.700", fontSize: "5xl"}} >Why choose Easybank?</Heading>
                     <Text sx={{ color: "neutral_1", fontSize: "xl"}}>We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</Text>
