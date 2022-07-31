@@ -1,17 +1,14 @@
-import { 
-    Box
-} from "@chakra-ui/react";
-import type { NextPage } from 'next'
+import { Box } from '@chakra-ui/react';
 
+import { Hero } from '../components/contact/Hero';
 
-
-
+import type { NextPage } from 'next';
 
 
 const Contact: NextPage = () => {
     return (
-        <Box as="main">
-           contact component
+        <Box as="main" mt={'1rem'}>
+            <Hero />
         </Box>
     );
 }
