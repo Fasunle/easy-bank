@@ -20,6 +20,7 @@ export const HeroText = () => (
 export const Hero = () => (
     <>
         <VStack sx={mobileSectionConatainer}>
+            
             <Box>
                 {/* TODO */}
                 {/* Place image here */}
