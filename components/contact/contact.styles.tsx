@@ -14,3 +14,22 @@ export const btnWithGradientStyle = {
         transform: "scale(1.05)"
     }
 }
+
+
+
+export const desktopSectionConatainer = {
+    "gridTemplateColumns": "repeat(12, 1fr)",
+    "gap": "1rem",
+    "h": "400px",
+    "display": {
+        "sm": "none",
+        "lg": "grid"
+    }
+}
+
+export const mobileSectionConatainer = {
+    'display': {
+        'sm': 'flex',
+        'md': 'none'
+    }
+}

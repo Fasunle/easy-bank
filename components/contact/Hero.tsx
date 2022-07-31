@@ -1,7 +1,7 @@
 import { Box, Grid, GridItem, Heading, Text, VStack } from '@chakra-ui/react';
 
-import { btnWithGradientStyle } from './contact.styles';
-import { heroDesktopConatainer, heroMobileConatainer, heroMobileText } from './Hero.styles';
+import { btnWithGradientStyle, desktopSectionConatainer, mobileSectionConatainer } from './contact.styles';
+import { heroMobileText } from './Hero.styles';
 
 
 export const HeroText = () => (
@@ -19,7 +19,7 @@ export const HeroText = () => (
 
 export const Hero = () => (
     <>
-        <VStack sx={heroMobileConatainer}>
+        <VStack sx={mobileSectionConatainer}>
             <Box>
                 {/* TODO */}
                 {/* Place image here */}
@@ -27,7 +27,7 @@ export const Hero = () => (
             <HeroText />
         </VStack>
 
-        <Grid as="section" sx={heroDesktopConatainer}>
+        <Grid as="section" sx={desktopSectionConatainer}>
             <GridItem colStart={2} colEnd={5} my="auto">
                 <HeroText />
             </GridItem>
