@@ -72,14 +72,7 @@ const whyUs = [
         "description": "Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.",
         "id": 4
     }
-]
-
-const InformationHeader = () => (
-    <>
-        <Heading as="h1" sx={{ color: "blackAlpha.700"}} >Why choose Easybank?</Heading>
-        <Text sx={{ color: "neutral_1"}}>We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</Text>
-    </>
-);
+];
 
 const InformationBody = ({whyUs}: {whyUs: WhyUsType[]}) => (
     <HStack  sx={informationBodyStyle}>
@@ -91,7 +84,7 @@ const InformationBody = ({whyUs}: {whyUs: WhyUsType[]}) => (
                     </Flex>
 
                     <Heading as="h2" sx={{fontSize:"2xl", my:".7em", color: "blackAlpha.700"}}>{title}</Heading>
-                    <Text  sx={{fontSize:"lg", mb:"1em", color: "neutral_1"}}>{description}</Text>
+                    <Text  sx={{fontSize:"xl", mb:"1em", color: "neutral_1"}}>{description}</Text>
                 </Box>
             ))
         }
@@ -102,7 +95,8 @@ export const WhyUs = () => (
     <>
         <Box as="section" sx={{display: {lg: 'none'}}}>
                 <VStack sx={{display: {sm: 'flex', lg: 'none'}, m: '2rem 1rem', textAlign: 'center'}}>
-                    <InformationHeader/>
+                    <Heading as="h1" sx={{ color: "blackAlpha.700", fontSize: "5xl"}} >Why choose Easybank?</Heading>
+                    <Text sx={{ color: "neutral_1", fontSize: "xl"}}>We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</Text>
                 </VStack>
 
                 <InformationBody whyUs={whyUs}/>
@@ -111,7 +105,8 @@ export const WhyUs = () => (
         <Grid as="section" sx={desktopSectionConatainer}>
             <GridItem sx={{gridColumnStart: 2, gridColumnEnd: "12"}} my="auto">
                 <VStack sx={{maxW:"60ch", alignItems:"flex-start", p: ".5rem 0 2rem 0", display: {sm: 'none', lg: 'flex'}}}>
-                    <InformationHeader/>
+                    <Heading as="h1" sx={{ color: "blackAlpha.700", fontSize: "2xl"}} >Why choose Easybank?</Heading>
+                    <Text sx={{ color: "neutral_1", fontSize: "xl"}}>We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</Text>
                 </VStack>
                 <InformationBody whyUs={whyUs}/>
             </GridItem>
