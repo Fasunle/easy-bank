@@ -100,14 +100,8 @@ const InformationBody = ({whyUs}: {whyUs: WhyUsType[]}) => (
 
 export const WhyUs = () => (
     <>
-        <Box as="section" sx={{display: {
-            lg: 'none'
-        }}}>
+        <Box as="section" sx={{display: {lg: 'none'}}}>
                 <VStack sx={{display: {sm: 'flex', lg: 'none'}, m: '2rem 1rem', textAlign: 'center'}}>
-                    <InformationHeader/>
-                </VStack>
-
-                <VStack sx={{maxW:"60ch", alignItems:"flex-start", p: ".5rem 0 2rem 0", display: {sm: 'none', lg: 'flex'}}}>
                     <InformationHeader/>
                 </VStack>
 
@@ -116,7 +110,9 @@ export const WhyUs = () => (
 
         <Grid as="section" sx={desktopSectionConatainer}>
             <GridItem sx={{gridColumnStart: 2, gridColumnEnd: "12"}} my="auto">
-                <InformationHeader/>
+                <VStack sx={{maxW:"60ch", alignItems:"flex-start", p: ".5rem 0 2rem 0", display: {sm: 'none', lg: 'flex'}}}>
+                    <InformationHeader/>
+                </VStack>
                 <InformationBody whyUs={whyUs}/>
             </GridItem>
         </Grid>
