@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Heading, HStack, Text, VStack } from '@chakra-ui/react';
+import { Box, Flex, Grid, GridItem, Heading, HStack, Text, VStack } from '@chakra-ui/react';
 import Image from "next/image";
 
 
@@ -17,6 +17,32 @@ const desktopSectionConatainer = {
     "display": {
         "sm": "none",
         "lg": "grid"
+    }
+}
+
+const informationBodyStyle = {
+    height:'max-content', 
+    gap: "1rem", 
+    flexDir:  {
+        sm: 'column', 
+        lg: 'row'
+    }, 
+    alignItems: {
+        sm: 'center', 
+        lg: 'flex-start'
+    },
+    m: 'auto'
+}
+
+const infoStyle = { 
+    width: {
+        sm: '90%', 
+        lg: '100%'
+    }, 
+    maxW:"max-content", 
+    textAlign: {
+        sm: 'center', 
+        lg: 'left'
     }
 }
 
@@ -49,20 +75,20 @@ const whyUs = [
 ]
 
 const InformationHeader = () => (
-    <VStack sx={{maxW:"60ch", alignItems:"flex-start", p: ".5rem 0 2rem 0"}}>
+    <>
         <Heading as="h1" sx={{ color: "blackAlpha.700"}} >Why choose Easybank?</Heading>
         <Text sx={{ color: "neutral_1"}}>We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</Text>
-    </VStack>
+    </>
 );
 
 const InformationBody = ({whyUs}: {whyUs: WhyUsType[]}) => (
-    <HStack  sx={{height:'max-content', alignItems:"stretch", columnGap: "1rem"}}>
+    <HStack  sx={informationBodyStyle}>
         {
             whyUs.map( ({id, title, url, description}) => (
-                <Box flexGrow="1" maxW="max-content" key={id}>
-                    <Box>
-                        <Image src={url} width='50%' height='50%' />
-                    </Box>
+                <Box  sx={infoStyle} key={id}>
+                    <Flex sx={{placeContent: {sm: "center", lg: "flex-start" }}}>
+                        <Image src={url} width='100%' height='100%' />
+                    </Flex>
 
                     <Heading as="h2" sx={{fontSize:"2xl", my:".7em", color: "blackAlpha.700"}}>{title}</Heading>
                     <Text  sx={{fontSize:"lg", mb:"1em", color: "neutral_1"}}>{description}</Text>
@@ -74,6 +100,20 @@ const InformationBody = ({whyUs}: {whyUs: WhyUsType[]}) => (
 
 export const WhyUs = () => (
     <>
+        <Box as="section" sx={{display: {
+            lg: 'none'
+        }}}>
+                <VStack sx={{display: {sm: 'flex', lg: 'none'}, m: '2rem 1rem', textAlign: 'center'}}>
+                    <InformationHeader/>
+                </VStack>
+
+                <VStack sx={{maxW:"60ch", alignItems:"flex-start", p: ".5rem 0 2rem 0", display: {sm: 'none', lg: 'flex'}}}>
+                    <InformationHeader/>
+                </VStack>
+
+                <InformationBody whyUs={whyUs}/>
+        </Box>
+
         <Grid as="section" sx={desktopSectionConatainer}>
             <GridItem sx={{gridColumnStart: 2, gridColumnEnd: "12"}} my="auto">
                 <InformationHeader/>
