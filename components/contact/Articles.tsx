@@ -13,11 +13,11 @@ const desktopSectionConatainer = {
     maxH: "max-content",
     "gridTemplateColumns": "repeat(12, 1fr)",
     "columnGap": "1em",
-    "my": "1em",
     "display": {
         "sm": "none",
         "lg": "grid"
-    }
+    },
+    bg: "neutral_3"
 }
 
 const articles: ArticleType[] = [
