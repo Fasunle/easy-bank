@@ -10,7 +10,8 @@ const desktopSectionConatainer = {
         "sm": "none",
         "lg": "grid"
     }, 
-    bg: "neutral_2"
+    bg: "neutral_2",
+    "p": "3rem 0"
 }
 
 const informationBodyStyle = {
