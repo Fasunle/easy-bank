@@ -3,10 +3,6 @@ import Image from "next/image";
 import {Link} from "@chakra-ui/react"
 
 
-type EasyLinkType = {
-    label: string, 
-    href: string
-}
 
 export const Logo = () => (
     <NextLink href="/" passHref>

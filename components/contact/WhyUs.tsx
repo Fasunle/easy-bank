@@ -3,13 +3,6 @@ import Image from 'next/image';
 
 
 
-type WhyUsType = {
-    id: string | number;
-    title: string;
-    description: string;
-    url: string;
-}
-
 const desktopSectionConatainer = {
     "gridTemplateColumns": "repeat(12, 1fr)",
     "columnGap": "1em",
