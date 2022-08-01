@@ -18,6 +18,7 @@ export const btnWithGradientStyle = {
 
 
 export const desktopSectionConatainer = {
+    maxH: "max-content",
     "gridTemplateColumns": "repeat(12, 1fr)",
     "gap": "1rem",
     "h": "400px",
