@@ -31,9 +31,5 @@ export const desktopFooterContainerStyle = {
 
 export const footerContainerStyle = {
     bg: "primary_1",
-    color: "gray.300",
-    pos: "fixed", 
-    bottom: "0", 
-    left: '0', 
-    right: '0',
+    color: "gray.300"
 }
