@@ -61,7 +61,7 @@ export const Article = () => (
                 <HStack as="article" gap="1rem" mt="3rem">
                     {
                         articles.map( (article: ArticleType) => (
-                            <VStack key={article.id} minH="100%">
+                            <VStack key={article.id} minH="100%" bg='white'>
                                 <Box sx={{w: 'full', h: '12.5rem', pos: 'relative'}}>
                                     <Image 
                                         src={article.url} 
