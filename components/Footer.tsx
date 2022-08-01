@@ -51,7 +51,7 @@ const SocialLinks = () => (
 const  AppLinks = () => (
     <VStack sx={{textAlign: "end"}}>
         <EasyLink href="/#about" label="About US"/>
-        <EasyLink href="/#contact" label="Contact"/>
+        <EasyLink href="/contact" label="Contact"/>
         <EasyLink href="/#blog" label="Blog"/>
     </VStack>
 );
