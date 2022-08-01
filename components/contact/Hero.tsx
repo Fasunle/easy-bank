@@ -9,6 +9,7 @@ export const HeroText = () => (
         <Heading as="h2">Next generation digital banking</Heading>
         <Text py={'1rem'}>Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</Text>
         <Box
+            alignSelf='center'
             as="button"
             sx={btnWithGradientStyle}
         >

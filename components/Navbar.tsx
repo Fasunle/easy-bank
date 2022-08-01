@@ -25,12 +25,12 @@ const Navbar = () => {
     return (
         <Flex as="nav" sx={navConatinerStyles}>
             {/* EasyBank Logo */}
-            <Logo/>
+            <Box p='1em'><Logo/></Box>
 
             <List sx={navItemStyles}>
                 <EasyLink href="/" label="Home"/>
                 <EasyLink href="/#about" label="About"/>
-                <EasyLink href="/#contact" label="Contact"/>
+                <EasyLink href="/contact" label="Contact"/>
                 <EasyLink href="/#blog" label="Blog"/>
                 <EasyLink href="/#careers" label="Careers"/>
             </List>
@@ -45,14 +45,18 @@ const Navbar = () => {
             </List>
 
             <Button colorScheme="whiteAlpha" onClick={() => setOpen(!open)} sx={hamburgerIconStyle}>
-                <Image  src="/images/icon-hamburger.svg" width={32} height={32} alt=""/>
+                {
+                    open ? 
+                        <Image  src="/images/icon-hamburger.svg" width={32} height={32} alt=""/> :
+                        <Image  src="/images/icon-close.svg" width={32} height={32} alt=""/>
+                }
             </Button>
 
             {/* Display this navigation on small screens */}
             <List hidden={open} sx={menuListItems}>
                 <EasyLink href="/" label="Home"/>
                 <EasyLink href="/#about" label="About"/>
-                <EasyLink href="/#contact" label="Contact"/>
+                <EasyLink href="/contact" label="Contact"/>
                 <EasyLink href="/#blog" label="Blog"/>
                 <EasyLink href="/#careers" label="Careers"/>
             </List>

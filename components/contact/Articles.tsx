@@ -13,7 +13,7 @@ const desktopSectionConatainer = {
 }
 
 const ArticleTemplate = ({author, description, id, title, url}: ArticleType) => (
-    <VStack key={id} minH="100%" bg='white'>
+    <VStack key={id} sx={{w: {md: '55%'}, bg:'white', minH:"100%"}}>
         <Box sx={{w: 'full', h: '12.5rem', pos: 'relative'}}>
             <Image 
                 src={url} 
@@ -38,7 +38,7 @@ export const Articles = ({articles}: {articles: ArticleType[]}) => (
             
             <VStack as="article" gap="1rem" mt="3rem"  flexDir={{lg: 'row', sm: 'column'}}>
                 {
-                    articles.map( (article: ArticleType) => <ArticleTemplate {...article}/>)
+                    articles.map( (article: ArticleType) => <ArticleTemplate key={article.id + article.author} {...article}/>)
                 }
             </VStack>
         </Box>
@@ -49,7 +49,7 @@ export const Articles = ({articles}: {articles: ArticleType[]}) => (
                 
                 <VStack as="article" gap="1rem" mt="3rem"  flexDir={{lg: 'row', sm: 'column'}}>
                     {
-                        articles.map( (article: ArticleType) => <ArticleTemplate {...article}/>)
+                        articles.map( (article: ArticleType) => <ArticleTemplate key={article.id + article.author}  {...article}/>)
                     }
                 </VStack>
             </GridItem>
