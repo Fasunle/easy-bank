@@ -45,7 +45,11 @@ const Navbar = () => {
             </List>
 
             <Button colorScheme="whiteAlpha" onClick={() => setOpen(!open)} sx={hamburgerIconStyle}>
-                <Image  src="/images/icon-hamburger.svg" width={32} height={32} alt=""/>
+                {
+                    open ? 
+                        <Image  src="/images/icon-hamburger.svg" width={32} height={32} alt=""/> :
+                        <Image  src="/images/icon-close.svg" width={32} height={32} alt=""/>
+                }
             </Button>
 
             {/* Display this navigation on small screens */}
