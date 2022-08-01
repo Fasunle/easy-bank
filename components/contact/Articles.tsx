@@ -72,7 +72,7 @@ export const Article = () => (
                                 </Box>
 
                                 <Box sx={{px: "1rem"}}>
-                                    <Heading as="h5" sx={{fontSize: "sm", color: "blackAlpha.600"}}>By {article.author}</Heading>
+                                    <Heading as="h5" sx={{fontSize: "sm", color: "blackAlpha.600", mt: '1rem'}}>By {article.author}</Heading>
                                     <Heading as="h2" sx={{fontSize: "lg", pt: "1rem", color: "blackAlpha.800", _hover: {color: "green.400"}}}>{article.title}</Heading>
                                     <Text sx={{py: "1rem"}}>{article.description}</Text>
                                 </Box>
