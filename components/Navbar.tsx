@@ -30,7 +30,7 @@ const Navbar = () => {
             <List sx={navItemStyles}>
                 <EasyLink href="/" label="Home"/>
                 <EasyLink href="/#about" label="About"/>
-                <EasyLink href="/#contact" label="Contact"/>
+                <EasyLink href="/contact" label="Contact"/>
                 <EasyLink href="/#blog" label="Blog"/>
                 <EasyLink href="/#careers" label="Careers"/>
             </List>
@@ -56,7 +56,7 @@ const Navbar = () => {
             <List hidden={open} sx={menuListItems}>
                 <EasyLink href="/" label="Home"/>
                 <EasyLink href="/#about" label="About"/>
-                <EasyLink href="/#contact" label="Contact"/>
+                <EasyLink href="/contact" label="Contact"/>
                 <EasyLink href="/#blog" label="Blog"/>
                 <EasyLink href="/#careers" label="Careers"/>
             </List>
