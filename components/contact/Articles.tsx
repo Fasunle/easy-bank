@@ -53,7 +53,7 @@ export const Article = () => (
             <GridItem sx={{gridColumnStart: 2, gridColumnEnd: "12"}} my="auto">
                 <Heading as="h3" sx={{fontSize: '3xl', color: 'blackAlpha.800'}}>Latest Articles</Heading>
 
-                <HStack as="article">
+                <HStack as="article" gap="1rem" mt="3rem">
                     {
                         articles.map( (article: ArticleType) => (
                             <VStack key={article.id}>
