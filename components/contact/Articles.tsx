@@ -61,13 +61,11 @@ export const Article = () => (
                 <HStack as="article" gap="1rem" mt="3rem">
                     {
                         articles.map( (article: ArticleType) => (
-                            <VStack key={article.id}>
-                                <Box sx={{aspectRatio: '1', w: 'full'}}>
+                            <VStack key={article.id} minH="100%">
+                                <Box sx={{w: 'full', h: '12.5rem', pos: 'relative'}}>
                                     <Image 
                                         src={article.url} 
-                                        layout="responsive" 
-                                        width='100%'
-                                        height="100%"
+                                        layout="fill" 
                                         style={{'borderTopRightRadius': '3%', 'borderTopLeftRadius': '3%'}} 
                                         alt={article.title} 
                                     />
