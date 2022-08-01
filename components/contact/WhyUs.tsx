@@ -1,5 +1,5 @@
 import { Box, Flex, Grid, GridItem, Heading, HStack, Text, VStack } from '@chakra-ui/react';
-import Image from "next/image";
+import Image from 'next/image';
 
 
 
@@ -13,7 +13,6 @@ type WhyUsType = {
 const desktopSectionConatainer = {
     "gridTemplateColumns": "repeat(12, 1fr)",
     "columnGap": "1em",
-    "my": "1em",
     "display": {
         "sm": "none",
         "lg": "grid"
@@ -81,7 +80,7 @@ const InformationBody = ({whyUs}: {whyUs: WhyUsType[]}) => (
             whyUs.map( ({id, title, url, description}) => (
                 <Box  sx={infoStyle} key={id}>
                     <Flex sx={{placeContent: {sm: "center", lg: "flex-start" }}}>
-                        <Image src={url} width='100%' height='100%' />
+                        <Image src={url} width='100%' height='100%' alt={title} />
                     </Flex>
 
                     <Heading as="h2" sx={{fontSize:"2xl", my:".7em", color: "blackAlpha.700"}}>{title}</Heading>
