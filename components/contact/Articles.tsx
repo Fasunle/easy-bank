@@ -50,8 +50,8 @@ const articles: ArticleType[] = [
 export const Article = () => (
     <>
         <Grid as="section" sx={desktopSectionConatainer}>
-            <GridItem sx={{gridColumnStart: 2, gridColumnEnd: "12"}} my="auto">
-                <Heading as="h3" sx={{fontSize: '3xl', color: 'blackAlpha.800'}}>Latest Articles</Heading>
+            <GridItem sx={{gridColumnStart: 2, gridColumnEnd: "12", py: '2rem'}} my="auto">
+                <Heading as="h3" sx={{fontSize: '3xl', color: 'blackAlpha.800', fontWeight: 'medium'}}>Latest Articles</Heading>
 
                 <HStack as="article" gap="1rem" mt="3rem">
                     {
