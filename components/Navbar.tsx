@@ -25,7 +25,7 @@ const Navbar = () => {
     return (
         <Flex as="nav" sx={navConatinerStyles}>
             {/* EasyBank Logo */}
-            <Logo/>
+            <Box p='1em'><Logo/></Box>
 
             <List sx={navItemStyles}>
                 <EasyLink href="/" label="Home"/>
