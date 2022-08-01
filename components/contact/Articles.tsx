@@ -57,7 +57,16 @@ export const Article = () => (
                     {
                         articles.map( (article: ArticleType) => (
                             <VStack key={article.id}>
-                                <Box></Box>
+                                <Box sx={{aspectRatio: '1', w: 'full'}}>
+                                    <Image 
+                                        src={article.url} 
+                                        layout="responsive" 
+                                        width='100%'
+                                        height="100%"
+                                        style={{'borderTopRightRadius': '3%', 'borderTopLeftRadius': '3%'}} 
+                                        alt={article.title} 
+                                    />
+                                </Box>
 
                                 <Box sx={{px: "1rem"}}>
                                     <Heading as="h5" sx={{fontSize: "sm", color: "blackAlpha.600"}}>By {article.author}</Heading>
