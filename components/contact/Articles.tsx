@@ -38,7 +38,7 @@ export const Articles = ({articles}: {articles: ArticleType[]}) => (
             
             <VStack as="article" gap="1rem" mt="3rem"  flexDir={{lg: 'row', sm: 'column'}}>
                 {
-                    articles.map( (article: ArticleType) => <ArticleTemplate {...article}/>)
+                    articles.map( (article: ArticleType) => <ArticleTemplate key={article.id + article.author} {...article}/>)
                 }
             </VStack>
         </Box>
@@ -49,7 +49,7 @@ export const Articles = ({articles}: {articles: ArticleType[]}) => (
                 
                 <VStack as="article" gap="1rem" mt="3rem"  flexDir={{lg: 'row', sm: 'column'}}>
                     {
-                        articles.map( (article: ArticleType) => <ArticleTemplate {...article}/>)
+                        articles.map( (article: ArticleType) => <ArticleTemplate key={article.id + article.author}  {...article}/>)
                     }
                 </VStack>
             </GridItem>
